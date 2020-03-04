@@ -9,6 +9,10 @@ public class Test{
 		test3(); //Ordem Alphabetica 
 		test4(); //Ordem AnoNascimento --> Matrícula --> Nome
 		test5();
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
+		testWithArrays();
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
+		testWithArrays2();
 	}
 
 	public static void test1(){
@@ -94,5 +98,57 @@ public class Test{
 				counter++;
 		}
 		array.add(counter, a);
+	}
+
+
+
+	public static void testWithArrays(){
+		Aluno a1 = new Aluno("Ande1", 1, 2004, 2010);
+		Aluno a2 = new Aluno("Pedro2", 2, 2000, 2010);
+		Aluno a3 = new Aluno("Mau", 3, 2000, 2014);
+		Aluno a4 = new Aluno("AnaMaria3", 3, 2006, 2011);
+		Aluno a5 = new Aluno("LoLa", 3, 1992, 2002);
+		Aluno a6 = new Aluno("GabY", 3, 1993, 2003);
+		Aluno a7 = new Aluno("PAf", 3, 2003, 2012);
+		Aluno a8 = new Aluno("Sara", 3, 2000, 2011);
+		List<Aluno> values = new ArrayList<Aluno>();
+		values.add(a1);
+		values.add(a2);
+		values.add(a3);
+		values.add(a4);
+		values.add(a5);
+		values.add(a6);
+		values.add(a7);
+		values.add(a8);
+		Comparator<Aluno> comp = new StringAlphabeticalComparator();
+		Collections.sort(values, comp);
+
+		for(Aluno x: values)
+			System.out.println(x.getName());
+
+
+	}
+	public static void testWithArrays2(){
+		Comparator<Aluno> comp = new StringAlphabeticalComparator();
+		Aluno[] arrayAluno = new Aluno[8];
+		Aluno a1 = new Aluno("Ande1", 1, 2004, 2010);
+		Aluno a2 = new Aluno("Pedro2", 2, 2000, 2010);
+		Aluno a3 = new Aluno("Mau", 3, 2000, 2014);
+		Aluno a4 = new Aluno("AnaMaria3", 3, 2006, 2011);
+		Aluno a5 = new Aluno("LoLa", 3, 1992, 2002);
+		Aluno a6 = new Aluno("GabY", 3, 1993, 2003);
+		Aluno a7 = new Aluno("PAf", 3, 2003, 2012);
+		Aluno a8 = new Aluno("Sara", 3, 2000, 2011);
+		arrayAluno[0] = a1;
+		arrayAluno[1] = a2;
+		arrayAluno[2] = a3;
+		arrayAluno[3] = a4;
+		arrayAluno[4] = a5;
+		arrayAluno[5] = a6;
+		arrayAluno[6] = a7;
+		arrayAluno[7] = a8;
+		Arrays.sort(arrayAluno, comp);
+		for(int i = 0; i < arrayAluno.length; i++)
+			System.out.println(arrayAluno[i].getName());
 	}
 }
