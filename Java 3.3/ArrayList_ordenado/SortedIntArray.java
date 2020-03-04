@@ -5,7 +5,7 @@ import java.io.*;
 public class SortedIntArray {
 	private ArrayList<Integer> array;
 	private SortingPolicy policy;
-		//MUDAR MUDAR MUDAR
+
 	public SortedIntArray(SortingPolicy policy) {
 		this.array = new ArrayList<>();
 		this.policy = policy;
@@ -28,7 +28,7 @@ public class SortedIntArray {
 	public int get(int index) {
 		return array.get(index);
 	}
-
+	//primeira maneira(Internal) Podes esquecer isto...
 	public class Descending implements SortingPolicy {
 
 		public boolean isBefore(int a, int b){
