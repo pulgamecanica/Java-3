@@ -1,4 +1,4 @@
 
-interface Comparator<T> {
-	boolean compare(T first, T second);
+public interface Comparator<T> {
+	int compare(T first, T second);
 }
