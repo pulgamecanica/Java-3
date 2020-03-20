@@ -122,7 +122,6 @@ public class Test{
 		values.add(a8);
 		Comparator<Aluno> comp = new StringAlphabeticalComparator();
 		Collections.sort(values, comp);
-
 		for(Aluno x: values)
 			System.out.println(x.getName());
 

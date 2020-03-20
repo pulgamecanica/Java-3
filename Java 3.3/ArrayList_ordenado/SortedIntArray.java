@@ -28,6 +28,17 @@ public class SortedIntArray {
 	public int get(int index) {
 		return array.get(index);
 	}
+
+
+	public static void main(String[] args){
+		SortedIntArray sortedArray = new SortedIntArray(new Descending_A());
+		sortedArray.add(1);
+		sortedArray.add(4);
+		sortedArray.add(2);
+		sortedArray.add(8);
+		for(int i = 0; i < sortedArray.size(); i++)
+			System.out.println(sortedArray.get(i));
+	}
 	//primeira maneira(Internal) Podes esquecer isto...
 	public class Descending implements SortingPolicy {
 
